@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Sample() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Portfolio</h1>
+      <h2>Sample</h2>
     </main>
   );
 }
