@@ -28,12 +28,22 @@ export default function Menu() {
     },
   ]
   return (
-    <nav className="h-full px-8 pt-12 shadow-md">
+    <nav className="h-full overflow-auto px-8 py-12 shadow-md">
       <div className="mx-4 mb-12 aspect-square bg-slate-400 "></div>
-      <Name />
-      <ul>
+      <div className="mb-12">
+        <Name />
+      </div>
+      <ul className="mb-12 flex flex-wrap gap-2">
+        <li className="rounded-md bg-[#CDF3FF] px-3 py-2 text-[12px] tracking-[.1rem]">
+          Front-end Enginner
+        </li>
+        <li className="rounded-md bg-[#CDF3FF] px-3 py-2 text-[12px] tracking-[.1rem]">
+          Keybord OTAKU
+        </li>
+      </ul>
+      <ul className="flex flex-col gap-y-5">
         {menu.map(({ name, path }) => (
-          <li key={path}>
+          <li key={path} className="text-[20px] font-medium tracking-[.3rem]">
             <Link href={path}>{name}</Link>
           </li>
         ))}
